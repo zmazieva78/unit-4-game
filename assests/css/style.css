@@ -37,10 +37,6 @@ h3 {
     float: left;
     padding-top: 15px;
 }
-/* .row_2 {
-    float: left;
-    width: 100%;
-} */
 #wins, #losses, #randomNumber, #score {
     padding-left: 20px;
     font-weight: bold;

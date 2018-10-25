@@ -1,12 +1,14 @@
-$( document ).ready(function(){
+$(document).ready(function(){
+// I assigned function to variable, which generates random number to match.
+    
     var Random=Math.floor(Math.random()*101+19)
-
     $('#randomNumber').text(Random);
 
-    var num1= Math.floor(Math.random()*11+1)
-    var num2= Math.floor(Math.random()*11+1)
-    var num3= Math.floor(Math.random()*11+1)
-    var num4= Math.floor(Math.random()*11+1)
+// I assigned function to crystals variables. 
+    var diamondNum= Math.floor(Math.random()*11+1)
+    var rubyNum= Math.floor(Math.random()*11+1)
+    var emeraldNum= Math.floor(Math.random()*11+1)
+    var onyxNum= Math.floor(Math.random()*11+1)
 
     var userTotal= 0; 
     var wins= 0;
@@ -14,75 +16,81 @@ $( document ).ready(function(){
 
   $('#Wins').text(wins);
   $('#Losses').text(losses);
-  //resets the game
+
+  //This function resets game after winning or losing game.
   function reset(){
         Random=Math.floor(Math.random()*101+19);
         console.log(Random)
         $('#randomNumber').text(Random);
-        num1= Math.floor(Math.random()*11+1);
-        num2= Math.floor(Math.random()*11+1);
-        num3= Math.floor(Math.random()*11+1);
-        num4= Math.floor(Math.random()*11+1);
+        diamondNum= Math.floor(Math.random()*11+1);
+        rubyNum= Math.floor(Math.random()*11+1);
+        emeraldNum= Math.floor(Math.random()*11+1);
+        onyxNum= Math.floor(Math.random()*11+1);
         userTotal= 0;
         $('#score').text(userTotal);
         } 
-  //adds the wins to the userTotal
-  function yay(){
-  alert("You won!");
+  //This function adds point to Wins.
+  function winner(){
     wins++; 
     $('#wins').text(wins);
     reset();
+    alert("You won!");
   }
-  //addes the losses to the userTotal
+  //This function adds point to Losses 
   function loser(){
-  alert ("You lose!");
     losses++;
     $('#losses').text(losses);
-    reset()
+    reset();
+    alert ("You lose!");
   }
-  //sets up click for jewels
+  //In this section I enable click on each crystal button.
+  
+// Diamond crystal
     $('#diamond').on ('click', function(){
-      userTotal = userTotal + num1;
+      userTotal = userTotal + diamondNum;
       console.log("New userTotal= " + userTotal);
       $('#score').text(userTotal); 
-            //sets win/lose conditions
+
           if (userTotal == Random){
-            yay();
+            winner();
           }
           else if ( userTotal > Random){
             loser();
           }   
-    })  
+    })
+// Ruby crystal
     $('#ruby').on ('click', function(){
-      userTotal = userTotal + num2;
+      userTotal = userTotal + rubyNum;
       console.log("New userTotal= " + userTotal);
       $('#score').text(userTotal); 
           if (userTotal == Random){
-            yay();
+            winner();
           }
           else if ( userTotal > Random){
             loser();
           } 
-    })  
+    })
+// Onyx crystal
     $('#onyx').on ('click', function(){
-      userTotal = userTotal + num3;
+      userTotal = userTotal + emeraldNum;
       console.log("New userTotal= " + userTotal);
       $('#score').text(userTotal);
-  //sets win/lose conditions
+
             if (userTotal == Random){
-            yay();
+            winner();
           }
           else if ( userTotal > Random){
             loser();
           } 
-    })  
+    })
+// Emerald crystal
     $('#emerald').on ('click', function(){
-      userTotal = userTotal + num4;
+      userTotal = userTotal + onyxNum;
       console.log("New userTotal= " + userTotal);
       $('#score').text(userTotal); 
         
             if (userTotal == Random){
-            yay();
+            winner();
           }
           else if ( userTotal > Random){
             loser();
