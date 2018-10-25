@@ -1,0 +1,54 @@
+body {
+    background-image: url("../images/diamond_upholstery.png");
+    font-family: Arial, Helvetica, sans-serif;
+}
+.content {
+    align-content: center;
+    width: 960px;
+    margin: auto;
+}
+.row_1 {
+    border-style: double;
+    background-image: url("../images/vichy.png");
+}
+p {
+    font-weight: bold;
+    padding-left: 20px;
+}
+h1 {
+    font-weight: bold;
+    font-size: 48px;
+    text-align: center;
+    color: rgb(18, 139, 49);
+}
+h3 {
+    font-weight: bold;
+    padding-left: 20px;
+    color: rgb(18, 139, 49);
+    text-align: center;
+}
+.column {
+    width: 25%;
+    float: left;
+    padding-top: 15px;
+}
+.column3 {
+    width: 10%;
+    float: left;
+    padding-top: 15px;
+}
+/* .row_2 {
+    float: left;
+    width: 100%;
+} */
+#wins, #losses, #randomNumber, #score {
+    padding-left: 20px;
+    font-weight: bold;
+    font-size: 28px;
+    border-style: solid;
+    background-color: rgb(240, 245, 177);
+    padding: 5px;
+    text-align: center;
+}
+
+
